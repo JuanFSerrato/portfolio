@@ -1,9 +1,17 @@
 ---
 interface Props {
   title: string;
+  path: string;
+  path2: string;
 }
 
-const { title } = Astro.props;
+const { title, path, path2 } = Astro.props;
 ---
 
-<h2 class="font-medium text-2xl text-[#9872ff] self-start">{title}</h2>
+<div class="flex self-start">
+  <h2 class="font-medium text-2xl text-violet-500 self-start">{title}</h2>
+  <svg class="w-8 h-8 ml-4" fill="currentColor" viewBox="0 0 16 16">
+    <path class="text-violet-500" d=`${path}`></path>
+    <path class="text-zinc-600" d=`${path2}`></path>
+  </svg>
+</div>

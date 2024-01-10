@@ -9,17 +9,9 @@ import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 ---
 
-<Layout title="Juan S Portfolio">
-  <Article>
-    <Image
-      class="min-w-[150px] min-h-[150px] border-solid border-[10px] border-white rounded-full shadow-[0px_0px_15px_black]"
-      src="/yo.jpeg"
-      alt="Imagen del desarrollador"
-      width="150"
-      height="150"
-    />
-    <h1 class="font-medium text-3xl text-[#491780] mt-4">Juan Serrato</h1>
-    <button id="theme" class="w-10 h-10">
+<Layout title="Juan S Porfolio">
+  <Article class2="relative">
+    <button id="theme" class="absolute w-10 h-10 right-0">
       <svg
         class="text-white bg-black dark:text-black dark:bg-white rounded-lg p-2"
         fill="currentColor"
@@ -37,6 +29,18 @@ import { Image } from "astro:assets";
         ></path>
       </svg>
     </button>
+    <Image
+      class="min-w-[150px] min-h-[150px] border-solid border-[4px] rounded-full border-black shadow-[0px_0px_15px_black] dark:border-white dark:shadow-[0px_0px_15px_white]"
+      src="/yo.jpeg"
+      alt="Imagen del desarrollador"
+      width="150"
+      height="150"
+    />
+    <h1
+      class="font-medium text-3xl text-purple-900 mt-4 dark:dark:text-purple-700"
+    >
+      Juan Serrato
+    </h1>
     <p class="my-4">Desarrollador apasionado por el aprendizaje.</p>
     <div class="flex flex-wrap justify-center gap-4">
       <Button
@@ -62,8 +66,12 @@ import { Image } from "astro:assets";
 
   <Break />
 
-  <Article>
-    <Title title="Experiencia" />
+  <Article class2=" ">
+    <Title
+      title="Experiencia"
+      path="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"
+      path2="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"
+    />
 
     <p class="my-5">
       Estoy en busca de mi primer trabajo por lo que aun no cuento con
@@ -73,8 +81,12 @@ import { Image } from "astro:assets";
 
   <Break />
 
-  <Article>
-    <Title title="Proyectos" />
+  <Article class2=" ">
+    <Title
+      title="Proyectos"
+      path="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.18.18 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.18.18 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.18.18 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.18.18 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.18.18 0 0 0 .134-.098z"
+      path2="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"
+    />
     <Card
       title="Lorem 1"
       href="https://www.google.com/?hl=es"
@@ -99,18 +111,68 @@ import { Image } from "astro:assets";
       alt="Imagen sobre Lorem"
     />
   </Article>
+
+  <Break />
+
+  <Article class2=" ">
+    <Title
+      title="Contacto"
+      path2="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"
+      path="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"
+    />
+
+    <div class="flex justify-center items-center w-[100%] mt-6">
+      <input
+        disabled
+        id="email"
+        class="bg-zinc-300 dark:bg-zinc-600 p-2 w-[40%] rounded-lg"
+        type="text"
+        value="juanfe.serratona@ecci.edu.co"
+      />
+      <a
+        href="mailto:juanfe.serratona@ecci.edu.co"
+        rel="nooperer"
+        class="m-4"
+        title="Enviar email"
+      >
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
+          <path
+            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"
+          ></path>
+        </svg>
+      </a>
+      <button id="btnCopy" title="Copiar email">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
+          <path
+            d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"
+          ></path>
+
+          <path
+            d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </Article>
+
+  <script>
+    const boton = document.getElementById("theme"),
+      sun = document.getElementById("sun"),
+      moon = document.getElementById("moon"),
+      boton2 = document.getElementById("btnCopy");
+
+    boton.addEventListener("click", changeTheme);
+    boton2.addEventListener("click", copyEmail);
+
+    function changeTheme() {
+      document.documentElement.classList.toggle("dark");
+      sun.classList.toggle("hidden");
+      moon.classList.toggle("hidden");
+    }
+
+    function copyEmail() {
+      let texto = document.getElementById("email");
+      navigator.clipboard.writeText(texto.value);
+    }
+  </script>
 </Layout>
-
-<script>
-  const boton = document.getElementById("theme"),
-    sun = document.getElementById("sun"),
-    moon = document.getElementById("moon");
-
-  boton.addEventListener("click", changeTheme);
-
-  function changeTheme() {
-    document.documentElement.classList.toggle("dark");
-    sun.classList.toggle("hidden");
-    moon.classList.toggle("hidden");
-  }
-</script>

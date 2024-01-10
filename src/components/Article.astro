@@ -1,5 +1,13 @@
+---
+interface Props {
+  class2: string;
+}
+
+const { class2 } = Astro.props;
+---
+
 <article
-  class="box-border flex flex-col items-center w-[100%] max-w-[700px] border-[20px] border-transparent"
+  class=`${class2} flex-col box-border flex items-center w-[100%] max-w-[700px] border-[20px] border-transparent`
 >
   <slot />
 </article>

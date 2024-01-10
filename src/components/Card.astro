@@ -25,16 +25,18 @@ const { href, title, body, img, alt } = Astro.props;
     />
   </div>
   <div class="min-h-[100%] w-[40%] movile:w-[100%]">
-    <h3 class="font-medium text-xl text-[#491780]">{title}</h3>
+    <h3 class="font-medium text-xl text-purple-900 dark:text-purple-700">
+      {title}
+    </h3>
+
     <p class="my-3">{body}</p>
-    <div
-      class="flex w-[50%] bg-[#f7e018] text-[#192bc7] rounded-lg justify-center items-center group hover:cursor-pointer"
-    >
-      <a
-        class="font-medium group-hover:underline"
-        href=`${href}`
-        target="_blank">Link</a
-      >
+
+    <a
+      class="flex w-[50%] rounded-lg justify-center items-center group hover:cursor-pointer bg-indigo-500 text-white dark:bg-indigo-800 dark:text-black font-medium group-hover:underline"
+      href=`${href}`
+      target="_blank"
+      >Link
+
       <svg
         class="w-7 h-7 ml-3 my-1 group-hover:rotate-45 transition-transform ease-in duration-200"
         fill="currentColor"
@@ -47,6 +49,6 @@ const { href, title, body, img, alt } = Astro.props;
           d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
         ></path>
       </svg>
-    </div>
+    </a>
   </div>
 </section>
