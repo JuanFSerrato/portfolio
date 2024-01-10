@@ -7,6 +7,8 @@ interface Props {
   alt: string;
 }
 
+import { Image } from "astro:assets";
+
 const { href, title, body, img, alt } = Astro.props;
 ---
 
@@ -14,10 +16,12 @@ const { href, title, body, img, alt } = Astro.props;
   class="flex items-center gap-4 text-base mt-6 movile:flex-col movile:items-start"
 >
   <div class="w-[50%] movile:w-[100%]">
-    <img
+    <Image
       src=`${img}`
       alt=`${alt}`
       class="w-[100%] rounded-tl-2xl rounded-bl-2xl movile:rounded-bl-[0px] movile:rounded-tr-2xl"
+      width="20"
+      height="20"
     />
   </div>
   <div class="min-h-[100%] w-[40%] movile:w-[100%]">
