@@ -1,0 +1,25 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  path: string;
+  color: string;
+}
+
+const { href, title, path, color } = Astro.props;
+---
+
+<a
+  class=`${color} font-medium text-white px-2 rounded-lg flex justify-center items-center no-underline h-[40px] active:text-[#9872ff] group `
+  href=`${href}`
+  target="_blank"
+  rel="nooperer"
+  ><p class="my-4 group-hover:-rotate-12">{title}</p>
+  <svg
+    class="h-8 w-8 ml-2 group-hover:rotate-12"
+    fill="currentColor"
+    viewBox="0 0 16 16"
+  >
+    <path d=`${path}`></path>
+  </svg></a
+>
