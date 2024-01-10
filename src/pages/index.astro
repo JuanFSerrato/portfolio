@@ -5,13 +5,16 @@ import Break from "../components/Break.astro";
 import Title from "../components/Title.astro";
 import Article from "../components/Article.astro";
 import Button from "../components/Button.astro";
+
+import { Image } from "astro:assets";
+import yo from "../../public/img/yo.jpeg";
 ---
 
 <Layout title="Juan S Portfolio">
   <Article>
-    <img
+    <Image
       class="min-w-[150px] min-h-[150px] w-[150px] h-[150px] border-solid border-[10px] border-white rounded-full shadow-[0px_0px_15px_black]"
-      src="/public/img/yo.jpeg"
+      src={yo}
       alt="Imagen del desarrollador"
     />
     <h1 class="font-medium text-3xl text-[#491780] mt-4">Juan Serrato</h1>
