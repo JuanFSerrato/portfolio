@@ -6,13 +6,13 @@ import Title from "../components/Title.astro";
 import Article from "../components/Article.astro";
 import Button from "../components/Button.astro";
 
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import yo from "../../public/img/yo.jpeg";
 ---
 
 <Layout title="Juan S Portfolio">
   <Article>
-    <Image
+    <Picture
       class="min-w-[150px] min-h-[150px] w-[150px] h-[150px] border-solid border-[10px] border-white rounded-full shadow-[0px_0px_15px_black]"
       src={yo}
       alt="Imagen del desarrollador"
