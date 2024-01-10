@@ -7,12 +7,16 @@ import Article from "../components/Article.astro";
 import Button from "../components/Button.astro";
 
 import { Image } from "astro:assets";
-import yo from "../../public/img/yo.jpeg";
 ---
 
 <Layout title="Juan S Portfolio">
   <Article>
-    <Image src={yo} alt="Imagen del desarrollador" />
+    <Image
+      src="/yo.jpeg"
+      alt="Imagen del desarrollador"
+      width="200"
+      height="200"
+    />
     <h1 class="font-medium text-3xl text-[#491780] mt-4">Juan Serrato</h1>
     <p class="my-4">Desarrollador apasionado por el aprendizaje.</p>
     <div class="flex flex-wrap justify-center gap-4">
