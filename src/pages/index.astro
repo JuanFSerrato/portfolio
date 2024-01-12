@@ -5,6 +5,7 @@ import Break from "../components/Break.astro";
 import Title from "../components/Title.astro";
 import Article from "../components/Article.astro";
 import Button from "../components/Button.astro";
+import ButtonEmail from "../components/ButtonEmail.astro";
 
 import { Image } from "astro:assets";
 ---
@@ -13,7 +14,7 @@ import { Image } from "astro:assets";
   <Article class2="relative">
     <button id="theme" class="absolute w-10 h-10 right-0">
       <svg
-        class="text-white bg-black dark:text-black dark:bg-white rounded-lg p-2"
+        class="text-beige-100 bg-zinc-950 dark:text-zinc-950 dark:bg-beige-100 rounded-lg p-2"
         fill="currentColor"
         viewBox="0 0 16 16"
       >
@@ -29,34 +30,39 @@ import { Image } from "astro:assets";
         ></path>
       </svg>
     </button>
-    <Image
-      class="min-w-[150px] min-h-[150px] border-solid border-[4px] rounded-full border-black shadow-[0px_0px_15px_black] dark:border-white dark:shadow-[0px_0px_15px_white]"
+
+    <!-- Avatar creado en: https://css-peeps.com/# -->
+    <div
+      data-css-peeps="beanie blank glasses2 hoodie"
+      class="min-w-[150px] min-h-[150px] border-solid border-[4px] rounded-full bg-beige-500 dark:bg-beige-700 border-beige-900 shadow-[0px_0px_15px_black] dark:border-beige-400 dark:shadow-[0px_0px_15px_white]"
+    >
+    </div>
+
+    <!-- <Image
+      class="min-w-[150px] min-h-[150px] border-solid border-[4px] rounded-full border-beige-900 shadow-[0px_0px_15px_black] dark:border-beige-300 dark:shadow-[0px_0px_15px_white]"
       src="/yo.jpeg"
       alt="Imagen del desarrollador"
       width="150"
       height="150"
-    />
+    /> -->
     <h1
-      class="font-medium text-3xl text-purple-900 mt-4 dark:dark:text-purple-700"
+      class="font-medium text-3xl text-beige-800 mt-4 dark:dark:text-beige-600"
     >
       Juan Serrato
     </h1>
     <p class="my-4">Desarrollador apasionado por el aprendizaje.</p>
     <div class="flex flex-wrap justify-center gap-4">
       <Button
-        color="bg-[#0a66c2]"
         href="https://www.linkedin.com/in/juan-felipe-serrato-narvaez-10770b278/"
         title="LinkedIn"
         path="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"
       />
       <Button
-        color="bg-black"
         href="https://github.com/JuanFSerrato"
         title="GitHub"
         path="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"
       />
       <Button
-        color="bg-[#00a7a7]"
         href=""
         title="CV"
         path="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755"
@@ -127,30 +133,13 @@ import { Image } from "astro:assets";
         <input
           disabled
           id="email"
-          class="bg-zinc-300 dark:bg-zinc-600 p-2 rounded-lg w-[100%]"
+          class="bg-beige-200 dark:bg-beige-700 p-2 rounded-lg w-[100%]"
           type="text"
           value="juanfe.serratona@ecci.edu.co"
         />
       </div>
 
-      <div class="flex justify-center items-center flex-col group mx-4">
-        <p
-          class="opacity-0 absolute rounded-md mb-4 bg-violet-700 p-1 bottom-8 pointer-events-none
-      transition-opacity ease-in duration-300
-      before:content-['']
-      before:bg-violet-700
-      before:absolute
-      before:w-2.5
-      before:rotate-45
-      before:h-2.5
-      before:-bottom-1
-      before:-z-10
-      before:left-1/2
-      before:-translate-x-1/2
-      group-hover:opacity-100"
-        >
-          Enviar email
-        </p>
+      <ButtonEmail id=" " text="Enviar email" clas="mx-4">
         <a href="mailto:juanfe.serratona@ecci.edu.co" rel="nooperer">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
             <path
@@ -158,27 +147,9 @@ import { Image } from "astro:assets";
             ></path>
           </svg></a
         >
-      </div>
+      </ButtonEmail>
 
-      <div class="flex justify-center items-center flex-col group">
-        <p
-          id="p_text"
-          class="opacity-0 absolute rounded-md mb-4 bg-violet-700 p-1 bottom-8 pointer-events-none
-      transition-opacity ease-in duration-300
-      before:content-['']
-      before:bg-violet-700
-      before:absolute
-      before:w-2.5
-      before:rotate-45
-      before:h-2.5
-      before:-bottom-1
-      before:-z-10
-      before:left-1/2
-      before:-translate-x-1/2
-      group-hover:opacity-100"
-        >
-          Copiar email
-        </p>
+      <ButtonEmail id="p_text" text="Copiar email" clas=" ">
         <button id="btnCopy">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16">
             <path
@@ -190,33 +161,48 @@ import { Image } from "astro:assets";
             ></path>
           </svg>
         </button>
-      </div>
+      </ButtonEmail>
     </div>
+
+    <script>
+      const boton = document.getElementById("theme"),
+        sun = document.getElementById("sun"),
+        moon = document.getElementById("moon"),
+        boton2 = document.getElementById("btnCopy"),
+        copyText = document.getElementById("p_text");
+
+      boton.addEventListener("click", changeTheme);
+      boton2.addEventListener("click", copyEmail);
+
+      function changeTheme() {
+        document.documentElement.classList.toggle("dark");
+        sun.classList.toggle("hidden");
+        moon.classList.toggle("hidden");
+      }
+
+      function copyEmail() {
+        let texto = document.getElementById("email") as HTMLInputElement;
+        navigator.clipboard.writeText(texto.value);
+        copyText.innerText = "Copiado!";
+        setTimeout(() => {
+          copyText.innerText = "Copiar email";
+        }, 1000);
+      }
+    </script>
   </Article>
-
-  <script>
-    const boton = document.getElementById("theme"),
-      sun = document.getElementById("sun"),
-      moon = document.getElementById("moon"),
-      boton2 = document.getElementById("btnCopy"),
-      copyText = document.getElementById("p_text");
-
-    boton.addEventListener("click", changeTheme);
-    boton2.addEventListener("click", copyEmail);
-
-    function changeTheme() {
-      document.documentElement.classList.toggle("dark");
-      sun.classList.toggle("hidden");
-      moon.classList.toggle("hidden");
-    }
-
-    function copyEmail() {
-      let texto = document.getElementById("email") as HTMLInputElement;
-      navigator.clipboard.writeText(texto.value);
-      copyText.innerText = "Copiado!";
-      setTimeout(() => {
-        copyText.innerText = "Copiar email";
-      }, 1000);
-    }
-  </script>
 </Layout>
+
+<style>
+  @import url(https://unpkg.com/css-peeps@1/css-peeps.compat.css);
+
+  div {
+    --peep-hat-color: #b79158;
+    --peep-skin-color: #e6dcc2;
+    --peep-clothes-color: #c8ad7e;
+
+    --peep-zoom: 1.8;
+
+    --peep-body-offset-x: -10px;
+    --peep-body-offset-y: 30px;
+  }
+</style>

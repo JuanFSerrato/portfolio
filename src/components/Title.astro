@@ -9,9 +9,13 @@ const { title, path, path2 } = Astro.props;
 ---
 
 <div class="flex self-start">
-  <h2 class="font-medium text-2xl text-violet-500 self-start">{title}</h2>
+  <h2
+    class="font-medium text-2xl text-beige-900 dark:text-beige-400 self-start"
+  >
+    {title}
+  </h2>
   <svg class="w-8 h-8 ml-4" fill="currentColor" viewBox="0 0 16 16">
-    <path class="text-violet-500" d=`${path}`></path>
-    <path class="text-zinc-600" d=`${path2}`></path>
+    <path class="text-beige-600 dark:text-beige-700" d=`${path}`></path>
+    <path class="text-beige-900 dark:text-beige-400" d=`${path2}`></path>
   </svg>
 </div>

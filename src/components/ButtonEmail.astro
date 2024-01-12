@@ -1,0 +1,31 @@
+---
+interface Props {
+  text: string;
+  clas: string;
+  id: string;
+}
+
+const { text, clas, id } = Astro.props;
+---
+
+<div class=`${clas} flex justify-center items-center flex-col group`>
+  <p
+    id=`${id}`
+    class="opacity-0 absolute rounded-md mb-4 bg-beige-500 p-1 bottom-8 pointer-events-none
+  transition-opacity ease-in duration-300
+  before:content-['']
+  before:bg-beige-500
+  before:absolute
+  before:w-2.5
+  before:rotate-45
+  before:h-2.5
+  before:-bottom-1
+  before:-z-10
+  before:left-1/2
+  before:-translate-x-1/2
+  group-hover:opacity-100"
+  >
+    {text}
+  </p>
+  <slot />
+</div>

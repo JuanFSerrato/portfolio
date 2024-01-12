@@ -25,14 +25,14 @@ const { href, title, body, img, alt } = Astro.props;
     />
   </div>
   <div class="min-h-[100%] w-[40%] movile:w-[100%]">
-    <h3 class="font-medium text-xl text-purple-900 dark:text-purple-700">
+    <h3 class="font-medium text-xl text-beige-850 dark:text-beige-300">
       {title}
     </h3>
 
     <p class="my-3">{body}</p>
 
     <a
-      class="flex w-[50%] rounded-lg justify-center items-center group hover:cursor-pointer bg-indigo-500 text-white dark:bg-indigo-800 dark:text-black font-medium group-hover:underline"
+      class="flex w-[50%] rounded-lg justify-center items-center group hover:cursor-pointer bg-beige-600 text-beige-50 dark:bg-beige-800 dark:text-beige-200 font-medium group-hover:underline active:text-beige-900 dark:active:text-beige-600"
       href=`${href}`
       target="_blank"
       >Link

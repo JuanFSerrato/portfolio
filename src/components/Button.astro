@@ -3,14 +3,13 @@ interface Props {
   href: string;
   title: string;
   path: string;
-  color: string;
 }
 
-const { href, title, path, color } = Astro.props;
+const { href, title, path } = Astro.props;
 ---
 
 <a
-  class=`${color} font-medium text-white px-2 rounded-lg flex justify-center items-center no-underline h-[40px] active:text-[#9872ff] group `
+  class=`bg-beige-700 dark:bg-beige-900 font-medium text-beige-100 dark:text-beige-200 px-2 rounded-lg flex justify-center items-center no-underline h-[40px] active:text-beige-900 dark:active:text-beige-600 group `
   href=`${href}`
   target="_blank"
   rel="nooperer"
